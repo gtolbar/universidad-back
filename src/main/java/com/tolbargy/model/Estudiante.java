@@ -1,6 +1,6 @@
 package com.tolbargy.model;
 
-import java.util.Date;
+import java.time.LocalDate;
 
 import javax.persistence.Column;
 import javax.persistence.Entity;
@@ -32,14 +32,15 @@ public class Estudiante {
 	private String apellido;
 	
 	@Column(name = "fecha_nacimiento", nullable = false)
-	private Date fechaNacimiento;
+	private LocalDate fechaNacimiento;
 	
 	@ManyToOne
-	@JoinColumn(name = "in_tipo_identifiacion")
-	private TipoIdentificacion tipoIdentifiacion;
+	@JoinColumn(name = "id_tipo_identificacion", nullable = false)
+	private TipoIdentificacion tipoIdentificacion;
 	
 	@ManyToOne
-	@JoinColumn(name = "in_tipo_sangre")
+	@JoinColumn(name = "id_tipo_sangre", nullable = false)
 	private TipoSangre tipoSangre;
+
 	
 }

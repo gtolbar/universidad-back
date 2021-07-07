@@ -14,6 +14,13 @@ import lombok.Data;
 @Table(name = "tipo_sangre")
 public class TipoSangre {
 	
+	public TipoSangre() {
+		
+	}
+	public TipoSangre(int id) {
+		this.id=id;
+	}
+	
 	@Id
 	@GeneratedValue(strategy = GenerationType.IDENTITY)
 	private int id;

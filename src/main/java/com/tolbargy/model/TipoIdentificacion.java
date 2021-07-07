@@ -13,7 +13,14 @@ import lombok.Data;
 @Entity
 @Table(name = "tipo_identificacion")
 public class TipoIdentificacion {
-
+	
+	public TipoIdentificacion() {
+		
+	}
+	public TipoIdentificacion(int id) {
+		this.id=id;
+	}
+	
 	@Id
 	@GeneratedValue(strategy = GenerationType.IDENTITY)
 	private int id;

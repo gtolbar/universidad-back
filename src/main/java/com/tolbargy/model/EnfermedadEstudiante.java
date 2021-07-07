@@ -30,5 +30,4 @@ public class EnfermedadEstudiante {
 	@Column(name = "observacion", nullable = false)
 	private String observacion;
 	
-	//Segundo commit
 }
